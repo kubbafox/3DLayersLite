@@ -63,7 +63,7 @@ I am using following dependecies to provide smoonth srcoll.
 If you would like to use pure JS solution. You can use your own method and replace this function in `script.js` file.
 ```JavaScript
  function scrollBackToContainerTop() {
-        ///Replace your own smooth scroll method
+        ///Replace it by using your own smooth scroll method
         TweenLite.to(window, 0.8, {scrollTo: 0, autoKill: false, ease: Power2.easeOut});
     }
 ```
