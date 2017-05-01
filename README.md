@@ -1,5 +1,5 @@
 ## A Simple 2 Layers UI Element With Lite Swap Animation. 
- -A 3D Layers UI Component		 
+ An *Evolution UI Framework* Component
  #### Live Demo
  https://kubbafox.github.io/3DLayersLite/
  
