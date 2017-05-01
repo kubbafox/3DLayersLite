@@ -270,7 +270,7 @@
         function pushClickedLayer() {
             var tempLayer = document.getElementById(tempLayerPositions[1].layerName);
             tempLayer.style.zIndex = 1;
-            tempLayer.style.marginLeft = (1 * 25).toString() + 'px';
+            tempLayer.style.marginLeft = (1 *25).toString() + 'px';
             tempLayer.style.marginTop = (1 * 45).toString() + 'px';
         }
 
