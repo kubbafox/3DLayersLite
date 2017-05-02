@@ -7,6 +7,8 @@
     "use strict";
 
     //Constructors
+    var firstLayerHeight = getFirstLayerHeight();
+    console.log(firstLayerHeight);
     setInitialLayerCSSPropertyValue();
     createLayerMapping();
     createClickEventListener();
@@ -18,6 +20,7 @@
         //Setup CCS Property for All Layers
         for (var i = 0; i < tempLayers.length; i++) {
             tempLayers[i].style.zIndex = i;
+            tempLayers[i].style.opacity = 1;
             tempLayers[i].style.marginLeft = (i * 25).toString() + 'px';
             tempLayers[i].style.marginTop = (i * 45).toString() + 'px';
 
@@ -397,12 +400,19 @@
         return parseInt(window.getComputedStyle(document.getElementById(tempLayerPositions[layerNumbers - 1].layerName)).getPropertyValue('height').replace('px', ''));
     }
 
+    function getFirstLayerHeight() {
+        var tempLayerPositions = createLayerMapping();
+        sortTempLayerBasedOnTopPositions(tempLayerPositions);
+        return parseInt(window.getComputedStyle(document.getElementById(tempLayerPositions[0].layerName)).getPropertyValue('height').replace('px', ''));
+    }
+
     function getLastLayerTitleWidth() {
         var layerNumbers = getLayerNumbers();
         var tempLayerPositions = createLayerMapping();
         sortTempLayerBasedOnTopPositions(tempLayerPositions);
         return parseInt(window.getComputedStyle(document.getElementById(tempLayerPositions[layerNumbers - 1].layerName).childNodes[1]).getPropertyValue('width').replace('px', ''));
     }
+
 
     function getContainerTopPosition() {
         return document.getElementById('evo_js_multiLayers_container').offsetTop;
