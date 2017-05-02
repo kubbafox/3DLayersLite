@@ -21,7 +21,8 @@
 
 .evo_c_multiLayers_container section {
     background: #FDFFFC;
-    height: 480px;
+    opacity: 0;
+    height: auto;
     border: solid 1px #808080;
     border-bottom: 0;
     border-right: 0;
